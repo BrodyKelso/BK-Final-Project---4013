@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$pageTitle?></title>
     <!-- Link to your local custom Bootstrap CSS file with Vapor theme -->
-    <link href="repositories/BK-Final-Project-4013/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
