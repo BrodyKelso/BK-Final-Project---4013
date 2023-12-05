@@ -12,7 +12,7 @@
     <h1>Games List</h1>
     <div class="table-responsive">
         <table class="table">
-            <thead class="thead-dark"> <!-- Added Vapor theme class for a dark thead -->
+            <thead class="thead-dark">
                 <tr>
                     <th>Date</th>
                     <th>Opponent</th>
@@ -23,19 +23,17 @@
                 </tr>
             </thead>
             <tbody>
-            <?php
-                while ($game = $games->fetch_assoc()) {
-                echo '<tr>';
-                echo '<td>' . htmlspecialchars($game['Date']) . '</td>';
-                echo '<td>' . htmlspecialchars($game['Opponent']) . '</td>';
-                echo '<td>' . htmlspecialchars($game['Location']) . '</td>';
-                echo '<td>' . htmlspecialchars($game['Result']) . '</td>';
-                echo '<td>' . htmlspecialchars($game['TeamScore']) . '</td>';
-                echo '<td>' . htmlspecialchars($game['OpponentScore']) . '</td>';
-                echo '</tr>';
-                }
-               ?>
-        </tbody>
+                <?php while ($game = $games->fetch_assoc()): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($game['Date']); ?></td>
+                        <td><?php echo htmlspecialchars($game['Opponent']); ?></td>
+                        <td><?php echo htmlspecialchars($game['Location']); ?></td>
+                        <td><?php echo htmlspecialchars($game['Result']); ?></td>
+                        <td><?php echo htmlspecialchars($game['TeamScore']); ?></td>
+                        <td><?php echo htmlspecialchars($game['OpponentScore']); ?></td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
         </table>
     </div>
     <!-- If there are no games found, display a message -->
