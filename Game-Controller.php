@@ -2,16 +2,13 @@
 require_once "util-db.php";
 require_once "Game-Model.php";
 
-
 $pageTitle = "Games";
 include "view-header.php";
 
-$games = selectGames();
+$games = selectGames(); // Make sure this is fetching data
+
 if ($games === false) {
-    die("Error: selectGames() returned false.");
-}
-if ($games->num_rows == 0) {
-    die("No games returned from the database.");
+    die("Error fetching games."); // Add error handling
 }
 
 include "Game-View.php";    
