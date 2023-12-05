@@ -22,7 +22,7 @@
                 <a class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Teams.php">Games</a>
+                <a class="nav-link" href="Game-View.php">Games</a>
               </li>
               <!-- ... other nav items ... -->
               <li class="nav-item">
