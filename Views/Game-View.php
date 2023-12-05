@@ -10,10 +10,9 @@
 </head>
 <body>
     <h1>Games List</h1>
-    <?php if ($games->num_rows > 0): ?>
-        <!-- Use Bootstrap classes to style the table with the Vapor theme -->
-        <table class="table table-hover">
-            <thead class="thead-dark"> <!-- Vapor theme typically uses a dark thead -->
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="thead-dark"> <!-- Added Vapor theme class for a dark thead -->
                 <tr>
                     <th>Date</th>
                     <th>Opponent</th>
@@ -36,7 +35,9 @@
                 <?php endwhile; ?>
             </tbody>
         </table>
-    <?php else: ?>
+    </div>
+    <!-- If there are no games found, display a message -->
+    <?php if ($games->num_rows === 0): ?>
         <p>No games found.</p>
     <?php endif; ?>
 </body>
