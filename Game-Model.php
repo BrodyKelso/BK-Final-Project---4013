@@ -3,7 +3,8 @@ require_once "util-db.php";
 function selectGames() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT 'Date', 'Opponent', 'Location', 'Result', 'TeamScore', 'OpponentScore' FROM 'Games';");
+        // Correct the query by removing single quotes around column and table names
+        $stmt = $conn->prepare("SELECT `Date`, `Opponent`, `Location`, `Result`, `TeamScore`, `OpponentScore` FROM `Games`;");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -13,4 +14,5 @@ function selectGames() {
         throw $e;
     }
 }
+
 ?>
