@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?=$pageTitle?></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Link to your local custom Bootstrap CSS file with Vapor theme -->
+    <link href="C:\Users\Brody\BK-Final-Project---4013" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Navbar customized for Vapor theme -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,21 +24,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="Teams.php">Games</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Coaches.php">Player Roster</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Games.php">Passing</a> <!-- Changed here -->
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Players.php">Rushing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Players.php">Receiving</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Players.php">Kicking</a>
-              </li>
+              <!-- ... other nav items ... -->
               <li class="nav-item">
                 <a class="nav-link" href="Players.php">Defense</a>
               </li>
@@ -44,3 +32,7 @@
           </div>
         </div>
       </nav>
+      <!-- Additional header content here -->
+    </div>
+  </body>
+</html>
