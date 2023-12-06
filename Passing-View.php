@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passing Stats</title>
+    <title>Passing Statistics</title>
     <!-- Link to Bootstrap CSS from a CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -31,7 +31,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while ($row = $passingStats->fetch_assoc()): ?>
+                    <?php while ($row = $passingStats->fetch_assoc()) { ?>
                         <tr>
                             <td><?php echo $row['PlayerID']; ?></td>
                             <td><?php echo $row['Completions']; ?></td>
@@ -46,7 +46,7 @@
                             <td><?php echo $row['SackYardsLost']; ?></td>
                             <td><?php echo $row['QuarterbackRating']; ?></td>
                         </tr>
-                    <?php endwhile; ?>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
