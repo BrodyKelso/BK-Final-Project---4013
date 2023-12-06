@@ -14,7 +14,4 @@ function selectGames() {
         throw $e;
     }
 }
-
 ?>
-
-

@@ -15,13 +15,13 @@
         <tbody>
             <?php while ($game = $games->fetch_assoc()) { ?>
                 <tr>
-                    <td><?php echo $game['game_id']; ?></td>
-                    <td><?php echo $game['opponent_name']; ?></td>
-                    <td><?php echo $game['date']; ?></td>
-                    <td><?php echo $game['location']; ?></td>
-                    <td><?php echo $game['result']; ?></td>
-                    <td><?php echo $game['team_score']; ?></td>
-                    <td><?php echo $game['opponent_score']; ?></td>
+                    <td><?php echo $game['GameID']; ?></td>
+                    <td><?php echo $game['Opponent']; ?></td>
+                    <td><?php echo $game['Date']; ?></td>
+                    <td><?php echo $game['Location']; ?></td>
+                    <td><?php echo $game['Result']; ?></td>
+                    <td><?php echo $game['TeamScore']; ?></td>
+                    <td><?php echo $game['OpponentScore']; ?></td>
                 </tr>
             <?php } ?>
         </tbody>
