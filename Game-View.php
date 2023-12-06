@@ -9,12 +9,13 @@
 </head>
 <body>
     <div class="container">
+        <?php include "view-header.php"; // Include the navbar from view-header.php ?>
+
         <h1>Games</h1>
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead class="thead-dark">
                     <tr>
-                        <th>ID</th>
                         <th>Opponent Name</th>
                         <th>Date</th>
                         <th>Location</th>
@@ -25,7 +26,6 @@
                 <tbody>
                     <?php while ($game = $games->fetch_assoc()): ?>
                         <tr>
-                            <td><?= $game['game_id']; ?></td>
                             <td><?= $game['opponent_name']; ?></td>
                             <td><?= $game['date']; ?></td>
                             <td><?= $game['location']; ?></td>
