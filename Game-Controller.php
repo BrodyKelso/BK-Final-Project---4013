@@ -6,7 +6,7 @@ $pageTitle = "Games";
 include "view-header.php";
 
 $games = selectGames(); // Attempt to fetch games
-
+include "Game-View.php";
 // Check if $games is false, indicating a query error
 if ($games === false) {
     error_log('selectGames() failed to execute');
@@ -24,8 +24,7 @@ if ($games->num_rows === 0) {
     error_log('No games returned from the database');
     die('No games found in the database.');
 }
-
-include "Game-View.php";    
+    
 
 include "view-footer.php";
 ?>
