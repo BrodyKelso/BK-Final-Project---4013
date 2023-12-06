@@ -23,23 +23,20 @@
                 </tr>
             </thead>
             <tbody>
-                <?php 
-                while ($game = $games->fetch_assoc()): 
-                ?>
+                <?php while ($game = $games->fetch_assoc()): ?>
                     <tr>
-                        <td><?php echo htmlspecialchars($game['Date']); ?></td>
-                        <td><?php echo htmlspecialchars($game['Opponent']); ?></td>
-                        <td><?php echo htmlspecialchars($game['Location']); ?></td>
-                        <td><?php echo htmlspecialchars($game['Result']); ?></td>
-                        <td><?php echo htmlspecialchars($game['TeamScore']); ?></td>
-                        <td><?php echo htmlspecialchars($game['OpponentScore']); ?></td>
+                        <td><?php echo $game['Date']; ?></td>
+                        <td><?php echo $game['Opponent']; ?></td>
+                        <td><?php echo $game['Location']; ?></td>
+                        <td><?php echo $game['Result']; ?></td>
+                        <td><?php echo $game['TeamScore']; ?></td>
+                        <td><?php echo $game['OpponentScore']; ?></td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>
         </table>
     </div>
-    <!-- If there are no games found, display a message -->
-    <?php if ($games->num_rows === 0): ?>
+    <?php if (isset($games) && $games->num_rows === 0): ?>
         <p>No games found.</p>
     <?php endif; ?>
 </body>
