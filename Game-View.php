@@ -24,15 +24,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while ($game = $games->fetch_assoc()): ?>
+                    <?php while ($game = $games->fetch_assoc()) { ?>
                         <tr>
-                            <td><?= $game['opponent_name']; ?></td>
-                            <td><?= $game['date']; ?></td>
-                            <td><?= $game['location']; ?></td>
-                            <td><?= $game['result']; ?></td>
-                            <td><?= $game['team_id']; ?></td>
+                            <td><?php echo $game['opponent_name']; ?></td>
+                            <td><?php echo $game['date']; ?></td>
+                            <td><?php echo $game['location']; ?></td>
+                            <td><?php echo $game['result']; ?></td>
+                            <td><?php echo $game['team_id']; ?></td>
                         </tr>
-                    <?php endwhile; ?>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
