@@ -23,7 +23,9 @@
                 </tr>
             </thead>
             <tbody>
-                <?php while ($game = $games->fetch_assoc()): ?>
+                <?php 
+                while ($game = $games->fetch_assoc()): 
+                ?>
                     <tr>
                         <td><?php echo htmlspecialchars($game['Date']); ?></td>
                         <td><?php echo htmlspecialchars($game['Opponent']); ?></td>
