@@ -14,7 +14,7 @@
         <tbody>
             <?php while ($game = $games->fetch_assoc()) { ?>
                 <tr>
-                    <td><?php echo $game['game_id']; ?></td>
+                    <td><?php echo $game['GameID']; ?></td>
                     <td><?php echo $game['opponent_name']; ?></td>
                     <td><?php echo $game['date']; ?></td>
                     <td><?php echo $game['location']; ?></td>
