@@ -32,7 +32,7 @@
                             <a class="nav-link" href="Players.php">Player Roster</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Players.php">Passing</a>
+                            <a class="nav-link" href="Passing-View.php">Passing</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Players.php">Rushing</a>
