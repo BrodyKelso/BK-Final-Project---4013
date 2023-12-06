@@ -12,14 +12,14 @@
             </tr>
         </thead>
         <tbody>
-            <?php while ($game = $games->fetch_assoc()) { ?>
+            <?php foreach ($games as $game) { ?>
                 <tr>
-                    <td><?php echo $game['game_id']; ?></td>
-                    <td><?php echo $game['opponent_name']; ?></td>
-                    <td><?php echo $game['date']; ?></td>
-                    <td><?php echo $game['location']; ?></td>
-                    <td><?php echo $game['result']; ?></td>
-                    <td><?php echo $game['team_id']; ?></td>
+                    <td><?php echo isset($game['game_id']) ? $game['game_id'] : ''; ?></td>
+                    <td><?php echo isset($game['opponent_name']) ? $game['opponent_name'] : ''; ?></td>
+                    <td><?php echo isset($game['date']) ? $game['date'] : ''; ?></td>
+                    <td><?php echo isset($game['location']) ? $game['location'] : ''; ?></td>
+                    <td><?php echo isset($game['result']) ? $game['result'] : ''; ?></td>
+                    <td><?php echo isset($game['team_id']) ? $game['team_id'] : ''; ?></td>
                 </tr>
             <?php } ?>
         </tbody>
