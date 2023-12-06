@@ -2,10 +2,10 @@
 require_once "util-db.php";
 require_once "Rushing-Model.php";
 
-$pageTitle = "Passing";
+$pageTitle = "Rushing";
 include "view-header.php";
 
-$rushingStats = selectPassing(); 
+$rushingStats = selectRushing(); 
 include "Rushing-View.php";
 
 

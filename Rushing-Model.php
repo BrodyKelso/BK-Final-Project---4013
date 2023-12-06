@@ -1,7 +1,7 @@
 <?php
 require_once "util-db.php";
 
-function selectPassing() {
+function selectRushing() {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("SELECT PlayerID, Carries, RushingYards, AverageYardsPerCarry, LongestRush, Touchdowns FROM Rushing;");
