@@ -29,7 +29,7 @@
                         </li>
                         <!-- ... other nav items ... -->
                         <li class="nav-item">
-                            <a class="nav-link" href="Players.php">Player Roster</a>
+                            <a class="nav-link" href="Player-View.php">Player Roster</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Passing-View.php">Passing</a>
