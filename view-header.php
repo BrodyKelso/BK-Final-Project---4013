@@ -35,13 +35,13 @@
                             <a class="nav-link" href="Passing-View.php">Passing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Players.php">Rushing</a>
+                            <a class="nav-link" href="Rushing-View.php">Rushing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Players.php">Kicking</a>
+                            <a class="nav-link" href="Kicking-View.php">Kicking</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Players.php">Defense</a>
+                            <a class="nav-link" href="Defense-View.php">Defense</a>
                         </li>
                     </ul>
                 </div>
