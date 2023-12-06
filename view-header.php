@@ -35,6 +35,9 @@
                             <a class="nav-link" href="Passing-View.php">Passing</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="Receiving-View.php">Receiving</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="Rushing-View.php">Rushing</a>
                         </li>
                         <li class="nav-item">

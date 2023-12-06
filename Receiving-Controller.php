@@ -5,7 +5,7 @@ require_once "Receiving-Model.php";
 $pageTitle = "Receiving";
 include "view-header.php";
 
-$games = selectReceiving(); 
+$receivingStats = selectReceiving(); 
 include "Receiving-View.php";
 
 

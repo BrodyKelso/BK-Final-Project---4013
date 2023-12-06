@@ -1,12 +1,12 @@
 <?php
 require_once "util-db.php";
-require_once "Passing-Model.php";
+require_once "Rushing-Model.php";
 
 $pageTitle = "Passing";
 include "view-header.php";
 
-$games = selectPassing(); 
-include "Passing-View.php";
+$rushingStats = selectPassing(); 
+include "Rushing-View.php";
 
 
 include "view-footer.php";
