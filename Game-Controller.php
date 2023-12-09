@@ -1,6 +1,6 @@
 <?php
 require_once("util-db.php");
-require_once("model-games.php");
+require_once("Game-Model.php");
 
 $pageTitle = "Games";
 include "view-header.php";
@@ -45,6 +45,6 @@ if (isset($_POST['actionType']))
 }
 
 $games = selectGames();
-include "view-games.php";
+include "Game-View.php";
 include "view-footer.php";
 ?>
