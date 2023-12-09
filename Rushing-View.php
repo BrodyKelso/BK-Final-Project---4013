@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- Navbar Section -->
         <?php include "view-header.php"; // Include the navbar from view-header.php ?>
 
         <h1>Rushing Statistics</h1>
