@@ -13,7 +13,7 @@
         <!-- Navbar customized for Vapor theme -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">OU Football Stats</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -29,22 +29,22 @@
                         </li>
                         <!-- ... other nav items ... -->
                         <li class="nav-item">
-                            <a class="nav-link" href="Player-View.php">Player Roster</a>
+                            <a class="nav-link" href="Player-Controller.php">Player Roster</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Passing-View.php">Passing</a>
+                            <a class="nav-link" href="Passing-Controller.php">Passing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Receiving-View.php">Receiving</a>
+                            <a class="nav-link" href="Receiving-Controller.php">Receiving</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Rushing-View.php">Rushing</a>
+                            <a class="nav-link" href="Rushing-Controller.php">Rushing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Kicking-View.php">Kicking</a>
+                            <a class="nav-link" href="Kicking-Controller.php">Kicking</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Defense-View.php">Defense</a>
+                            <a class="nav-link" href="Defense-Controller.php">Defense</a>
                         </li>
                     </ul>
                 </div>
