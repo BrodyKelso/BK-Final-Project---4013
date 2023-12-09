@@ -29,4 +29,17 @@ function insertGame($game_id, $opponent_name, $date, $location, $result, $team_s
     }
 }
 
+function deleteGame($game_id) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE FROM Games WHERE GameID = ?");
+        $stmt->bind_param("i", $game_id);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
 ?>
