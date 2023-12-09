@@ -1,6 +1,6 @@
 <?php
 require_once("util-db.php");
-require_once("model-games.php");
+require_once("Model-Games.php");
 
 $pageTitle = "Games";
 include "view-header.php";
