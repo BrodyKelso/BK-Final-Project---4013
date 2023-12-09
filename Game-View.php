@@ -66,13 +66,29 @@
 
     <!-- Add Game Modal -->
     <div class="modal fade" id="addGamesModal" tabindex="-1" aria-labelledby="addGamesModalLabel" aria-hidden="true">
-        <!-- Add your add game form here -->
+        <!-- Include your "Add Game" form here -->
+        <form method="post" action="model-games.php">
+            <input type="hidden" name="actionType" value="Add">
+            
+            <!-- Your form fields go here -->
+            
+            <button type="submit" class="btn btn-primary">Add Game</button>
+        </form>
     </div>
 
     <!-- Edit Game Modals (One for each game) -->
+    <?php $games->data_seek(0); // Reset result set pointer to fetch games again ?>
     <?php while ($game = $games->fetch_assoc()) { ?>
         <div class="modal fade" id="editGamesModal-<?php echo $game['GameID']; ?>" tabindex="-1" aria-labelledby="editGamesModalLabel" aria-hidden="true">
-            <!-- Add your edit game form for GameID <?php echo $game['GameID']; ?> here -->
+            <!-- Include your "Edit Game" form for GameID <?php echo $game['GameID']; ?> here -->
+            <form method="post" action="model-games.php">
+                <input type="hidden" name="actionType" value="Edit">
+                <input type="hidden" name="game_id" value="<?php echo $game['GameID']; ?>">
+                
+                <!-- Your form fields for editing the game go here -->
+                
+                <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
         </div>
     <?php } ?>
 </body>

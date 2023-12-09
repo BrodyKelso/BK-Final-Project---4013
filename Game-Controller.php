@@ -10,7 +10,7 @@ if (isset($_POST['actionType']))
     switch ($_POST['actionType'])
     {
         case "Add":
-            if (insertGame($_POST['GameID'], $_POST['Opponent'], $_POST['Date'], $_POST['Location'], $_POST['Result'], $_POST['TeamScore'], $_POST['OpponentScore']))
+            if (insertGame($_POST['game_id'], $_POST['opponent_name'], $_POST['date'], $_POST['location'], $_POST['result'], $_POST['team_score'], $_POST['opponent_score']))
             {
                 echo '<div class="alert alert-success" role="alert">Game added successfully.</div>';
             }
@@ -21,7 +21,7 @@ if (isset($_POST['actionType']))
             break;
 
         case "Edit":
-            if (editGame($_POST['GameID'], $_POST['Opponent'], $_POST['Date'], $_POST['Location'], $_POST['Result'], $_POST['TeamScore'], $_POST['OpponentScore']))
+            if (editGame($_POST['game_id'], $_POST['opponent_name'], $_POST['date'], $_POST['location'], $_POST['result'], $_POST['team_score'], $_POST['opponent_score']))
             {
                 echo '<div class="alert alert-success" role="alert">Game updated successfully.</div>';
             }
