@@ -14,4 +14,19 @@ function selectGames() {
         throw $e;
     }
 }
+
+function insertGame($game_id, $opponent_name, $date, $location, $result, $team_score, $opponent_score) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("INSERT INTO `Games` (`GameID`, `Opponent`, `Date`, `Location`, `Result`, `TeamScore`, `OpponentScore`) VALUES (?, ?, ?, ?, ?, ?, ?);");
+        $stmt->bind_param("issssii", $game_id, $opponent_name, $date, $location, $result, $team_score, $opponent_score);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 ?>
