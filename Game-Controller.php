@@ -7,15 +7,34 @@ include "view-header.php";
 
 $games = selectGames();
 
-// Handle game deletion
+// Handle game actions (Add, Edit, Delete)
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    if ($_POST["actionType"] === "Delete") {
+    $actionType = $_POST["actionType"];
+    
+    if ($actionType === "Add") {
+        // Handle adding a new game
+        $game_id = $_POST["game_id"];
+        $opponent_name = $_POST["opponent_name"];
+        $date = $_POST["date"];
+        $location = $_POST["location"];
+        $result = $_POST["result"];
+        $team_id = $_POST["team_id"];
+        
+        insertGame($game_id, $opponent_name, $date, $location, $result, $team_id);
+    } elseif ($actionType === "Edit") {
+        // Handle editing a game
+        $game_id = $_POST["game_id"];
+        $opponent_name = $_POST["opponent_name"];
+        $date = $_POST["date"];
+        $location = $_POST["location"];
+        $result = $_POST["result"];
+        $team_id = $_POST["team_id"];
+        
+        editGame($game_id, $opponent_name, $date, $location, $result, $team_id);
+    } elseif ($actionType === "Delete") {
+        // Handle deleting a game
         $game_id = $_POST["game_id"];
         deleteGame($game_id);
-    } elseif ($_POST["actionType"] === "Add") {
-        // Handle adding a new game
-    } elseif ($_POST["actionType"] === "Edit") {
-        // Handle editing a game
     }
 }
 

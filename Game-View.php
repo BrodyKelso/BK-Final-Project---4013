@@ -37,6 +37,11 @@
                             <td>
                                 <form method="post" action="">
                                     <input type="hidden" name="game_id" value="<?php echo $game['GameID']; ?>">
+                                    <input type="hidden" name="actionType" value="Edit">
+                                    <button type="submit" class="btn btn-warning">Edit</button>
+                                </form>
+                                <form method="post" action="">
+                                    <input type="hidden" name="game_id" value="<?php echo $game['GameID']; ?>">
                                     <input type="hidden" name="actionType" value="Delete">
                                     <button type="submit" class="btn btn-danger">Delete</button>
                                 </form>

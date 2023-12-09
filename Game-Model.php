@@ -29,6 +29,20 @@ function insertGame($game_id, $opponent_name, $date, $location, $result, $team_s
     }
 }
 
+function editGame($game_id, $opponent_name, $date, $location, $result, $team_score, $opponent_score) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `Games` SET `Opponent` = ?, `Date` = ?, `Location` = ?, `Result` = ?, `TeamScore` = ?, `OpponentScore` = ? WHERE `GameID` = ?;");
+        $stmt->bind_param("ssssiis", $opponent_name, $date, $location, $result, $team_score, $opponent_score, $game_id);
+        $success = $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
 function deleteGame($game_id) {
     try {
         $conn = get_db_connection();
