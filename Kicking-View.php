@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="container">
-        <?php include "view-header.php"; // Include the navbar from view-header.php ?>
 
         <h1>Kicking Statistics</h1>
         <div class="table-responsive">
