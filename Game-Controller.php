@@ -50,6 +50,6 @@ if (isset($_POST['actionType'])) {
 }
 
 $games = selectGames();
-include "view-games.php";
+include "Game-View.php";
 include "view-footer.php";
 ?>
