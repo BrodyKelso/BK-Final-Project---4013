@@ -10,6 +10,12 @@
 <body>
     <div class="container">
         <h1>Games</h1>
+
+        <!-- Add Button -->
+        <form method="post" action="">
+            <button type="submit" name="actionType" value="Add" class="btn btn-primary">Add Game</button>
+        </form>
+
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead class="thead-dark">
@@ -35,15 +41,15 @@
                             <td><?php echo $game['TeamScore']; ?></td>
                             <td><?php echo $game['OpponentScore']; ?></td>
                             <td>
+                                <!-- Edit Button -->
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editGamesModal-<?php echo $game['GameID']; ?>">
+                                    Edit
+                                </button>
+
+                                <!-- Delete Button -->
                                 <form method="post" action="">
                                     <input type="hidden" name="game_id" value="<?php echo $game['GameID']; ?>">
-                                    <input type="hidden" name="actionType" value="Edit">
-                                    <button type="submit" class="btn btn-warning">Edit</button>
-                                </form>
-                                <form method="post" action="">
-                                    <input type="hidden" name="game_id" value="<?php echo $game['GameID']; ?>">
-                                    <input type="hidden" name="actionType" value="Delete">
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" name="actionType" value="Delete" class="btn btn-danger">Delete</button>
                                 </form>
                             </td>
                         </tr>
