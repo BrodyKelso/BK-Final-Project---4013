@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Players</h1>
-        <?php include "view-players-newform.php"; ?>
+        <?php include "view-player-newform.php"; ?>
 
         <div class="table-responsive">
             <table class="table table-bordered">
@@ -38,7 +38,7 @@
                             <td><?php echo $player['Weight']; ?></td>
                             <td><?php echo $player['Year']; ?></td>
                             <td>
-                                <?php include "view-players-editform.php"; ?>
+                                <?php include "view-player-editform.php"; ?>
                                 <form method="post" action="">
                                     <input type="hidden" name="playerID" value="<?php echo $player['PlayerID']; ?>">
                                     <button type="submit" name="actionType" value="Delete" class="btn btn-danger">Delete</button>
