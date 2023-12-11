@@ -15,11 +15,11 @@ function selectGames() {
     }
 }
 
-function insertGame($game_id, $opponent_name, $date, $location, $result, $team_score, $opponent_score) {
+function insertGame($opponent_name, $date, $location, $result, $team_score, $opponent_score) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `Games` (`GameID`, `Opponent`, `Date`, `Location`, `Result`, `TeamScore`, `OpponentScore`) VALUES (?, ?, ?, ?, ?, ?, ?);");
-        $stmt->bind_param("issssii", $game_id, $opponent_name, $date, $location, $result, $team_score, $opponent_score);
+        $stmt = $conn->prepare("INSERT INTO `Games` (`Opponent`, `Date`, `Location`, `Result`, `TeamScore`, `OpponentScore`) VALUES (?, ?, ?, ?, ?, ?);");
+        $stmt->bind_param("ssssii", $opponent_name, $date, $location, $result, $team_score, $opponent_score);
         $success = $stmt->execute();
         $conn->close();
         return $success;
