@@ -13,13 +13,18 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="">
-                    <!-- PlayerID Field (Assuming a dropdown selection of player IDs) -->
-                    <div class="mb-3">
-                        <label for="playerID" class="form-label">Player ID</label>
-                        <select class="form-control" id="playerID" name="playerID" required>
-                            <!-- Dynamically populated with player IDs -->
-                        </select>
+                    <!-- PlayerID Dropdown -->
+                <div class="mb-3">
+                    <label for="playerID" class="form-label">Player ID</label>
+                    <select class="form-control" id="playerID" name="playerID" required>
+                               <?php foreach ($players as $player) { ?>
+                               <option value="<?php echo $player['PlayerID']; ?>">
+                               <?php echo $player['PlayerID'] . ' - ' . $player['Name']; ?>
+                            </option>
+                          <?php } ?>
+                      </select>
                     </div>
+
 
                     <!-- Completions Field -->
                     <div class="mb-3">
