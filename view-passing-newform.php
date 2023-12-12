@@ -13,17 +13,11 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="">
-                   <!-- PlayerID Dropdown -->
+                    <!-- PlayerID Field -->
                     <div class="mb-3">
-                     <label for="playerID" class="form-label">Player ID</label>
-                     <select class="form-control" id="playerID" name="playerID" required>
-                       <?php foreach ($playerIDs as $player) { ?>
-                         <option value="<?php echo $player['PlayerID']; ?>">
-                         <?php echo $player['PlayerID']; ?>
-                         </option>
-                       <?php } ?>
-                       </select>
-                     </div>
+                        <label for="playerID" class="form-label">Player ID</label>
+                        <input type="number" class="form-control" id="playerID" name="playerID" required>
+                    </div>
 
                     <!-- Completions Field -->
                     <div class="mb-3">
