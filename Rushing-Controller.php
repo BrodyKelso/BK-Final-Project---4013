@@ -32,10 +32,10 @@ if (isset($_POST['actionType'])) {
             break;
     }
 
-    // Refresh the stats after any action
-    $rushingStats = selectRushing();
+
 }
 
+$rushingStats = selectRushing();
 include "Rushing-View.php";
 include "view-footer.php";
 ?>
